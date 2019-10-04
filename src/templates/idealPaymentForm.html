@@ -1,0 +1,7 @@
+<div class="buckaroo-form">
+    <select name="issuer">
+    {% for issuer in issuers %}
+        <option value="{{ issuer.id }}">{{ issuer.name }} - {{ issuer.paymentMethod }}</option>
+    {% endfor %}
+    </select>
+</div>

@@ -1,0 +1,43 @@
+{
+  "name": "born05/craft-commerce-buckaroo",
+  "description": "Buckaroo Gateway for Craft Commerce",
+  "version": "1.0.0-beta.1",
+  "type": "craft-plugin",
+  "keywords": [
+    "buckaroo",
+    "commerce",
+    "craftcms",
+    "omnipay"
+  ],
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Roel van Hintum",
+      "email": "roel@born05.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "craftcms/cms": "^3.3",
+    "craftcms/commerce": "^2.0|^3.0",
+    "craftcms/commerce-omnipay": "^2.0.0",
+    "omnipay/buckaroo": "~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "born05\\commerce\\buckaroo\\": "src/"
+    }
+  },
+  "support": {
+    "email": "development@born05.com",
+    "issues": "https://github.com/born05/craft-commerce-buckaroo/issues",
+    "source": "https://github.com/born05/craft-commerce-buckaroo",
+    "docs": "https://github.com/born05/craft-commerce-buckaroo/blob/master/README.md",
+    "rss": "https://github.com/born05/craft-commerce-buckaroo/releases.atom"
+  },
+  "extra": {
+    "name": "Buckaroo for Craft Commerce",
+    "handle": "commerce-buckaroo"
+  }
+}
