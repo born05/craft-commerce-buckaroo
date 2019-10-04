@@ -5,7 +5,7 @@ namespace born05\commerce\buckaroo;
 use born05\commerce\buckaroo\gateways\CreditCardGateway;
 use born05\commerce\buckaroo\gateways\IdealGateway;
 use born05\commerce\buckaroo\gateways\PayPalGateway;
-use born05\commerce\buckaroo\gateways\SepaDirectGateway;
+use born05\commerce\buckaroo\gateways\SepaDirectDebitGateway;
 
 use craft\commerce\services\Gateways;
 use craft\events\RegisterComponentTypesEvent;
@@ -27,7 +27,7 @@ class Plugin extends \craft\base\Plugin
             $event->types[] = CreditCardGateway::class;
             $event->types[] = IdealGateway::class;
             $event->types[] = PayPalGateway::class;
-            $event->types[] = SepaDirectGateway::class;
+            $event->types[] = SepaDirectDebitGateway::class;
         });
     }
 }

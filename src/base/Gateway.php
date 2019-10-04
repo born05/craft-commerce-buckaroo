@@ -1,6 +1,6 @@
 <?php
 
-namespace born05\commerce\buckaroo\gateways;
+namespace born05\commerce\buckaroo\base;
 
 use born05\commerce\buckaroo\models\RequestResponse;
 use born05\commerce\buckaroo\models\forms\OffsitePaymentForm;
@@ -12,7 +12,7 @@ use Omnipay\Common\AbstractGateway;
 use Omnipay\Omnipay;
 use Omnipay\Buckaroo\Gateway as OmnipayGateway;
 
-class Gateway extends OffsiteGateway
+abstract class Gateway extends OffsiteGateway
 {
     // Properties
     // =========================================================================

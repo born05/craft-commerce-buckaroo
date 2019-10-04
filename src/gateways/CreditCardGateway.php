@@ -2,6 +2,7 @@
 
 namespace born05\commerce\buckaroo\gateways;
 
+use born05\commerce\buckaroo\base\Gateway;
 use born05\commerce\buckaroo\models\forms\CreditCardPaymentForm;
 
 use Craft;
@@ -9,14 +10,14 @@ use craft\commerce\models\payments\BasePaymentForm;
 use craft\web\View;
 use Omnipay\Buckaroo\CreditCardGateway as OmniPayCreditCardGateway;
 
-class CreditCardGateway extends BaseGateway
+class CreditCardGateway extends Gateway
 {
     /**
      * @inheritdoc
      */
     public static function displayName(): string
     {
-        return Craft::t('commerce', 'CreditCard');
+        return Craft::t('commerce', 'Buckaroo CreditCard');
     }
 
     /**
