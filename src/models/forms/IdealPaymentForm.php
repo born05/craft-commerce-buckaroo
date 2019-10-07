@@ -2,9 +2,9 @@
 
 namespace born05\commerce\buckaroo\models\forms;
 
-use craft\commerce\models\payments\BasePaymentForm;
+use craft\commerce\models\payments\OffsitePaymentForm;
 
-class IdealPaymentForm extends BasePaymentForm
+class IdealPaymentForm extends OffsitePaymentForm
 {
     public $issuer;
 }

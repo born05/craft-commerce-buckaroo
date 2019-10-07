@@ -1,5 +1,9 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 1.0.0-beta.4 - 2019-10-07
+
+- Switched to OffsitePaymentForm
+
 ## 1.0.0-beta.3 - 2019-10-07
 
 - Updated plugin icon
