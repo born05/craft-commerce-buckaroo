@@ -5,7 +5,7 @@ namespace born05\commerce\buckaroo\gateways;
 use born05\commerce\buckaroo\base\Gateway;
 
 use Craft;
-use Omnipay\Buckaroo\SepaDirectGateway as OmniPaySepaDirectGateway;
+use Omnipay\Buckaroo\SepaDirectDebitGateway as OmniPaySepaDirectDebitGateway;
 
 class SepaDirectDebitGateway extends Gateway
 {
@@ -25,6 +25,6 @@ class SepaDirectDebitGateway extends Gateway
      */
     protected function getGatewayClassName()
     {
-        return '\\' . OmniPaySepaDirectGateway::class;
+        return '\\' . OmniPaySepaDirectDebitGateway::class;
     }
 }
