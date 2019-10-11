@@ -6,6 +6,7 @@ use born05\commerce\buckaroo\models\RequestResponse;
 use born05\commerce\buckaroo\models\forms\OffsitePaymentForm;
 
 use Craft;
+use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\OffsiteGateway;
 
 use Omnipay\Common\AbstractGateway;
@@ -46,9 +47,17 @@ abstract class Gateway extends OffsiteGateway
     /**
      * @inheritdoc
      */
+    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null)
+    {
+        $request['culture'] = Craft::$app->language;
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function supportsWebhooks(): bool
     {
-        return true;
+        return false;
     }
 
     /**

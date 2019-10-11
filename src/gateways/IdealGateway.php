@@ -62,6 +62,8 @@ class IdealGateway extends Gateway
      */
     public function populateRequest(array &$request, BasePaymentForm $paymentForm = null)
     {
+        parent::populateRequest($request, $paymentForm);
+
         if ($paymentForm) {
             /** @var IdealPaymentForm $paymentForm */
             if ($paymentForm->issuer) {

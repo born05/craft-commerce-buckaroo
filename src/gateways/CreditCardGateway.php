@@ -62,6 +62,8 @@ class CreditCardGateway extends Gateway
      */
     public function populateRequest(array &$request, BasePaymentForm $paymentForm = null)
     {
+        parent::populateRequest($request, $paymentForm);
+
         if ($paymentForm) {
             /** @var CreditCardPaymentForm $paymentForm */
             if ($paymentForm->paymentMethod) {
