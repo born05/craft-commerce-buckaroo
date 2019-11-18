@@ -1,5 +1,9 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 1.0.0 - 2019-11-18
+
+- Bumped to 1.0.0
+
 ## 1.0.0-beta.5 - 2019-10-11
 
 - Populate every request with culture.

@@ -1,4 +1,4 @@
-# Buckaroo Gateway for Craft Commerce (beta)
+# Buckaroo Gateway for Craft Commerce
 
 Adds Buckaroo gateway support to Craft Commerce.
 
