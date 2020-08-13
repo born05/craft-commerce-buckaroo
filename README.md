@@ -1,11 +1,11 @@
 # Buckaroo Gateway for Craft Commerce
 
-Adds Buckaroo gateway support to Craft Commerce.
+Adds Buckaroo gateway support to Craft Commerce. Currently supports: Credit Card, Ideal, PayPal and Sepa Direct Debit.
 
 ## Requirements
 
-- Craft 3.3.*
-- Craft Commerce 2.*
+- Craft 3.3 and up
+- Craft Commerce 2 or 3
 
 ## Installation
 
