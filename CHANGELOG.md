@@ -1,5 +1,9 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 1.1.0.1 - 2020-11-03
+### Fixed
+- Fixed composer.json for composer 2
+
 ## 1.1.0 - 2020-08-27
 
 - Moved from omnipay/buckaroo to born05/omnipay-buckaroo to allow composer's minimum-stability to be stable.
