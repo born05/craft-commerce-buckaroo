@@ -20,6 +20,18 @@ composer require born05/craft-commerce-buckaroo
 
 Add a new gateway as described in [Gateway Configuration](https://docs.craftcms.com/commerce/v2/gateway-config.html)
 
+## Config
+
+Create a `config/commerce-buckaroo.php` with the following contents:
+
+```php
+<?php
+
+return [
+    'testMode' => false,
+];
+```
+
 ## License
 
 Copyright © [Born05](https://www.born05.com/)

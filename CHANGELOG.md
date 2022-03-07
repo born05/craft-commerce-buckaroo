@@ -1,5 +1,9 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 1.2.0 - 2022-03-07
+### Added
+- Added `commerce-buckaroo.php` config for setting testMode from env.
+
 ## 1.1.0.1 - 2020-11-03
 ### Fixed
 - Fixed composer.json for composer 2

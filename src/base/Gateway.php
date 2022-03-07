@@ -2,15 +2,13 @@
 
 namespace born05\commerce\buckaroo\base;
 
-use born05\commerce\buckaroo\models\RequestResponse;
-use born05\commerce\buckaroo\models\forms\OffsitePaymentForm;
+use born05\commerce\buckaroo\Plugin as BuckarooPlugin;
 
 use Craft;
 use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\OffsiteGateway;
 
 use Omnipay\Common\AbstractGateway;
-use Omnipay\Omnipay;
 use Omnipay\Buckaroo\Gateway as OmnipayGateway;
 
 abstract class Gateway extends OffsiteGateway
@@ -92,9 +90,12 @@ abstract class Gateway extends OffsiteGateway
         /** @var OmnipayGateway $gateway */
         $gateway = static::createOmnipayGateway($this->getGatewayClassName());
 
+        $settings = BuckarooPlugin::$plugin->getSettings();
+        $testMode = $settings->testMode !== null ? $settings->testMode : $this->testMode;
+
         $gateway->setWebsiteKey(Craft::parseEnv($this->websiteKey));
         $gateway->setSecretKey(Craft::parseEnv($this->secretKey));
-        $gateway->setTestMode($this->testMode);
+        $gateway->setTestMode($testMode);
 
         return $gateway;
     }
