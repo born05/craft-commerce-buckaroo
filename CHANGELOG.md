@@ -1,5 +1,9 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 1.3.0 - 2022-03-10
+### Change
+- Update ideal issuers
+
 ## 1.2.1 - 2022-03-10
 ### Fixed
 - Gateway settings are correctly stored in database and project config.

@@ -110,8 +110,8 @@ class IdealGateway extends Gateway
             'FVLBNL22' => 'Van Lanschot',
             'KNABNL2H' => 'Knab',
             'BUNQNL2A' => 'Bunq',
-            'MOYONL21' => 'Moneyou',
             'HANDNL2A' => 'Handelsbanken',
+            'REVOLT21' => 'Revolut',
         ];
     }
 
