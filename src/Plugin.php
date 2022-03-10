@@ -20,10 +20,7 @@ class Plugin extends \craft\base\Plugin
      *
      * @var Plugin
      */
-    public static $plugin;
-
-    // Public Methods
-    // =========================================================================
+    public static Plugin $plugin;
 
     /**
      * @inheritdoc
@@ -41,7 +38,10 @@ class Plugin extends \craft\base\Plugin
         });
     }
 
-    protected function createSettingsModel()
+    /**
+     * @inheritdoc
+     */
+    protected function createSettingsModel(): Settings
     {
         return new Settings();
     }
