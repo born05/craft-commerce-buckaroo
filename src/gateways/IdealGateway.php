@@ -12,6 +12,27 @@ use Omnipay\Buckaroo\IdealGateway as OmniPayIdealGateway;
 
 class IdealGateway extends Gateway
 {
+    // Properties
+    // =========================================================================
+
+    /**
+     * @var string
+     */
+    public $websiteKey;
+
+    /**
+     * @var string
+     */
+    public $secretKey;
+
+    /**
+     * @var bool
+     */
+    public $testMode = false;
+
+    // Public Methods
+    // =========================================================================
+
     /**
      * @inheritdoc
      */

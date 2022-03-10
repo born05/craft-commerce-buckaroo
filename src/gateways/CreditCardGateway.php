@@ -12,6 +12,27 @@ use Omnipay\Buckaroo\CreditCardGateway as OmniPayCreditCardGateway;
 
 class CreditCardGateway extends Gateway
 {
+    // Properties
+    // =========================================================================
+
+    /**
+     * @var string
+     */
+    public $websiteKey;
+
+    /**
+     * @var string
+     */
+    public $secretKey;
+
+    /**
+     * @var bool
+     */
+    public $testMode = false;
+
+    // Public Methods
+    // =========================================================================
+
     /**
      * @inheritdoc
      */
