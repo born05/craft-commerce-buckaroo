@@ -12,6 +12,27 @@ use Omnipay\Buckaroo\IdealGateway as OmniPayIdealGateway;
 
 class IdealGateway extends Gateway
 {
+    // Properties
+    // =========================================================================
+
+    /**
+     * @var string
+     */
+    public $websiteKey;
+
+    /**
+     * @var string
+     */
+    public $secretKey;
+
+    /**
+     * @var bool
+     */
+    public $testMode = false;
+
+    // Public Methods
+    // =========================================================================
+
     /**
      * @inheritdoc
      */
@@ -89,8 +110,8 @@ class IdealGateway extends Gateway
             'FVLBNL22' => 'Van Lanschot',
             'KNABNL2H' => 'Knab',
             'BUNQNL2A' => 'Bunq',
-            'MOYONL21' => 'Moneyou',
             'HANDNL2A' => 'Handelsbanken',
+            'REVOLT21' => 'Revolut',
         ];
     }
 

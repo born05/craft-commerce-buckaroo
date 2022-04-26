@@ -9,6 +9,27 @@ use Omnipay\Buckaroo\PayPalGateway as OmniPayPayPalGateway;
 
 class PayPalGateway extends Gateway
 {
+    // Properties
+    // =========================================================================
+
+    /**
+     * @var string
+     */
+    public $websiteKey;
+
+    /**
+     * @var string
+     */
+    public $secretKey;
+
+    /**
+     * @var bool
+     */
+    public $testMode = false;
+
+    // Public Methods
+    // =========================================================================
+
     /**
      * @inheritdoc
      */

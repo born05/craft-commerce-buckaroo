@@ -9,6 +9,27 @@ use Omnipay\Buckaroo\SepaDirectDebitGateway as OmniPaySepaDirectDebitGateway;
 
 class SepaDirectDebitGateway extends Gateway
 {
+    // Properties
+    // =========================================================================
+
+    /**
+     * @var string
+     */
+    public $websiteKey;
+
+    /**
+     * @var string
+     */
+    public $secretKey;
+
+    /**
+     * @var bool
+     */
+    public $testMode = false;
+
+    // Public Methods
+    // =========================================================================
+
     /**
      * @inheritdoc
      */
