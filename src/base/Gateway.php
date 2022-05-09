@@ -9,7 +9,7 @@ use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\OffsiteGateway;
 
 use Omnipay\Common\AbstractGateway;
-use Omnipay\Buckaroo\Gateway as OmnipayGateway;
+use Omnipay\Buckaroo\BuckarooGateway as OmnipayBuckarooGateway;
 
 abstract class Gateway extends OffsiteGateway
 {
@@ -37,7 +37,7 @@ abstract class Gateway extends OffsiteGateway
     /**
      * @inheritdoc
      */
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate('commerce-buckaroo/gatewaySettings', ['gateway' => $this]);
     }
@@ -45,7 +45,7 @@ abstract class Gateway extends OffsiteGateway
     /**
      * @inheritdoc
      */
-    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null)
+    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null): void
     {
         $request['culture'] = Craft::$app->language;
     }
@@ -71,9 +71,9 @@ abstract class Gateway extends OffsiteGateway
     /**
      * @inheritdoc
      */
-    public function rules()
+    public function defineRules(): array
     {
-        $rules = parent::rules();
+        $rules = parent::defineRules();
         $rules[] = ['paymentType', 'compare', 'compareValue' => 'purchase'];
 
         return $rules;
@@ -87,7 +87,7 @@ abstract class Gateway extends OffsiteGateway
      */
     protected function createGateway(): AbstractGateway
     {
-        /** @var OmnipayGateway $gateway */
+        /** @var OmnipayBuckarooGateway $gateway */
         $gateway = static::createOmnipayGateway($this->getGatewayClassName());
 
         $settings = BuckarooPlugin::$plugin->getSettings();

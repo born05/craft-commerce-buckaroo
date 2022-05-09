@@ -44,7 +44,7 @@ class PayPalGateway extends Gateway
     /**
      * @inheritdoc
      */
-    protected function getGatewayClassName()
+    protected function getGatewayClassName(): null|string
     {
         return '\\' . OmniPayPayPalGateway::class;
     }

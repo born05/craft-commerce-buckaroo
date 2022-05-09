@@ -44,7 +44,7 @@ class SepaDirectDebitGateway extends Gateway
     /**
      * @inheritdoc
      */
-    protected function getGatewayClassName()
+    protected function getGatewayClassName(): null|string
     {
         return '\\' . OmniPaySepaDirectDebitGateway::class;
     }

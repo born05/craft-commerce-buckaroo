@@ -52,7 +52,7 @@ class CreditCardGateway extends Gateway
     /**
      * @inheritdoc
      */
-    public function getPaymentFormHtml(array $params)
+    public function getPaymentFormHtml(array $params): null|string
     {
         try {
             $defaults = [
@@ -81,7 +81,7 @@ class CreditCardGateway extends Gateway
     /**
      * @inheritdoc
      */
-    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null)
+    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null): void
     {
         parent::populateRequest($request, $paymentForm);
 
@@ -96,7 +96,7 @@ class CreditCardGateway extends Gateway
     /**
      * @return mixed
      */
-    public function fetchPaymentMethods()
+    public function fetchPaymentMethods(): array
     {
         // Source: https://dev.buckaroo.nl/PaymentMethods/Description/creditcards
         return [
@@ -122,7 +122,7 @@ class CreditCardGateway extends Gateway
     /**
      * @inheritdoc
      */
-    protected function getGatewayClassName()
+    protected function getGatewayClassName(): null|string
     {
         return '\\' . OmniPayCreditCardGateway::class;
     }
