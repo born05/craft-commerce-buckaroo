@@ -1,5 +1,11 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 1.4.0-beta.1 - 2022-06-30
+### Change
+- Require Craft 3.7 and up
+- Require Craft Commerce 3.0 and up
+- Require craftcms/commerce-omnipay 3.0 and up
+
 ## 1.3.0 - 2022-03-10
 ### Change
 - Update ideal issuers
