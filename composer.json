@@ -37,5 +37,12 @@
   "extra": {
     "name": "Buckaroo for Craft Commerce",
     "handle": "commerce-buckaroo"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true,
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
   }
 }
