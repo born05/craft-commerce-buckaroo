@@ -98,20 +98,20 @@ class IdealGateway extends Gateway
      */
     public function fetchIssuers()
     {
-        // Source: https://dev.buckaroo.nl/PaymentMethods/Description/ideal
+        // Source: https://docs.buckaroo.io/docs/nl/ideal-integration
         return [
             'ABNANL2A' => 'ABN AMRO',
             'ASNBNL21' => 'ASN Bank',
+            'BUNQNL2A' => 'Bunq',
             'INGBNL2A' => 'ING',
+            'KNABNL2H' => 'Knab',
             'RABONL2U' => 'Rabobank',
+            'REVOLT21' => 'Revolut',
             'SNSBNL2A' => 'SNS Bank',
             'RBRBNL21' => 'SNS Regio Bank',
             'TRIONL2U' => 'Triodos Bank',
             'FVLBNL22' => 'Van Lanschot',
-            'KNABNL2H' => 'Knab',
-            'BUNQNL2A' => 'Bunq',
-            'HANDNL2A' => 'Handelsbanken',
-            'REVOLT21' => 'Revolut',
+            'BITSNL2A' => 'YourSafe',
         ];
     }
 

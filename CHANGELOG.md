@@ -1,5 +1,9 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 1.4.0 - 2023-07-06
+### Changed
+- Updated list of issuers
+
 ## 1.4.0-beta.1 - 2022-06-30
 ### Change
 - Require Craft 3.7 and up
