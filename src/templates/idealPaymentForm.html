@@ -1,7 +1,8 @@
 <div class="buckaroo-form">
-    <select name="issuer">
-    {% for id, name in issuers %}
+    <select name="issuer" required>
+        <option disabled selected value="">{{ 'ideal:issuer:placeholder'|t('commerce-buckaroo') }}</option>
+        {% for id, name in issuers %}
         <option value="{{ id }}">{{ name }}</option>
-    {% endfor %}
+        {% endfor %}
     </select>
 </div>
