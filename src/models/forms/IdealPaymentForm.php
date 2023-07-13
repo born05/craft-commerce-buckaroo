@@ -6,5 +6,8 @@ use craft\commerce\models\payments\OffsitePaymentForm;
 
 class IdealPaymentForm extends OffsitePaymentForm
 {
-    public $issuer;
+    /**
+     * @var string|null
+     */
+    public ?string $issuer = null;
 }

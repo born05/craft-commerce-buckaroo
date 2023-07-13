@@ -1,5 +1,9 @@
 # Release notes for Buckaroo Gateway for Craft Commerce
 
+## 2.1.1 - 2023-07-13
+### Changed
+- Match Craft's php standards as much as possible
+
 ## 2.1.0 - 2023-07-07
 ### Changed
 - Ideal issuer select doesn't have a bank selected by default anymore

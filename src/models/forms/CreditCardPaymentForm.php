@@ -6,5 +6,8 @@ use craft\commerce\models\payments\OffsitePaymentForm;
 
 class CreditCardPaymentForm extends OffsitePaymentForm
 {
-    public $paymentMethod;
+    /**
+     * @var string|null
+     */
+    public ?string $paymentMethod = null;
 }

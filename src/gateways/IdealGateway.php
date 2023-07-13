@@ -16,19 +16,19 @@ class IdealGateway extends Gateway
     // =========================================================================
 
     /**
-     * @var string
+     * @var string|null
      */
-    public $websiteKey;
+    public ?string $websiteKey;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public $secretKey;
+    public ?string $secretKey;
 
     /**
-     * @var bool
+     * @var bool|null
      */
-    public $testMode = false;
+    public ?bool $testMode = false;
 
     // Public Methods
     // =========================================================================
@@ -121,7 +121,7 @@ class IdealGateway extends Gateway
     /**
      * @inheritdoc
      */
-    protected function getGatewayClassName(): null|string
+    protected function getGatewayClassName(): ?string
     {
         return '\\' . OmniPayIdealGateway::class;
     }

@@ -7,6 +7,7 @@ use born05\commerce\buckaroo\Plugin as BuckarooPlugin;
 use Craft;
 use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\OffsiteGateway;
+use craft\helpers\App;
 
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Buckaroo\BuckarooGateway as OmnipayBuckarooGateway;
@@ -17,19 +18,19 @@ abstract class Gateway extends OffsiteGateway
     // =========================================================================
 
     /**
-     * @var string
+     * @var string|null
      */
-    public $websiteKey;
+    public ?string $websiteKey;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public $secretKey;
+    public ?string $secretKey;
 
     /**
-     * @var bool
+     * @var bool|null
      */
-    public $testMode = false;
+    public ?bool $testMode = false;
 
     // Public Methods
     // =========================================================================
@@ -93,8 +94,8 @@ abstract class Gateway extends OffsiteGateway
         $settings = BuckarooPlugin::$plugin->getSettings();
         $testMode = $settings->testMode !== null ? $settings->testMode : $this->testMode;
 
-        $gateway->setWebsiteKey(Craft::parseEnv($this->websiteKey));
-        $gateway->setSecretKey(Craft::parseEnv($this->secretKey));
+        $gateway->setWebsiteKey(App::parseEnv($this->websiteKey));
+        $gateway->setSecretKey(App::parseEnv($this->secretKey));
         $gateway->setTestMode($testMode);
 
         return $gateway;
