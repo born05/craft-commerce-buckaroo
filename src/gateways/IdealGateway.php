@@ -18,12 +18,12 @@ class IdealGateway extends Gateway
     /**
      * @var string|null
      */
-    public ?string $websiteKey;
+    public ?string $websiteKey = "";
 
     /**
      * @var string|null
      */
-    public ?string $secretKey;
+    public ?string $secretKey = "";
 
     /**
      * @var bool|null
